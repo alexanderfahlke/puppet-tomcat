@@ -22,6 +22,8 @@ define tomcat::instance (
   $java_opts                    = '-Djava.awt.headless=true -Xmx128m  -XX:+UseConcMarkSweepGC',
   $catalina_opts                = '',
   $java_home                    = '',
+  $ulimit_openfiles_hard        = 1024,
+  $ulimit_openfiles_soft        = 1024,
 
   $catalina_properties_template = '',
   $logging_properties_template  = '',
